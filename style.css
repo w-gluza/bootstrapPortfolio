@@ -120,7 +120,7 @@ header,
 }
 
 .section-contact {
-  height: 90vh;
+  height: 80vh;
 }
 
 footer {
@@ -277,4 +277,8 @@ li {
 }
 .icon__projects:hover {
   fill: var(--secondary);
+}
+
+.profile {
+  padding-top: 4rem;
 }
