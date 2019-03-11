@@ -105,6 +105,8 @@ p {
   color: var(--primary) !important;
 }
 
+/* Sections Styling */
+
 header,
 .section-about {
   min-height: 100vh;
@@ -262,4 +264,17 @@ li {
     max-width: 60%;
     height: auto;
   }
+}
+
+.icon__projects,
+.svg__icon {
+  height: 3.5rem;
+  fill: var(--primary);
+}
+
+.svg__icon:hover {
+  fill: var(--light);
+}
+.icon__projects:hover {
+  fill: var(--secondary);
 }
