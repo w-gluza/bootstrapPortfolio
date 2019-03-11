@@ -130,7 +130,38 @@ footer {
   height: 3.5rem;
 }
 
-@media (max-width: 720px) {
+/* Nav  */
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--dark);
+  cursor: pointer;
+  display: block;
+  font-weight: var(--font-weight-light);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary);
+}
+
+li {
+  padding: 0 15px;
+}
+
+#nav__check {
+  display: none;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: var(--light);
+  padding: 0px 20px;
+}
+
+@media (max-width: 768px) {
   .container {
     padding: 0 5rem;
   }
@@ -162,9 +193,70 @@ footer {
   header {
     height: 80vh;
   }
+
+  /* Nav */
+
+  a {
+    font-size: 42px;
+  }
+
+  .nav__btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav__btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+    cursor: pointer;
+  }
+  .nav__btn > label:hover {
+    background-color: var(--secondary);
+  }
+  .nav__btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 1px solid var(--dark);
+  }
+
+  .nav__items {
+    position: absolute;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    text-align: center;
+    color: white;
+    height: 0px;
+    overflow-y: auto;
+    display: block;
+  }
+
+  .open {
+    background-color: var(--secondary);
+    height: calc(100vh - 50px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a:hover {
+    color: var(--light);
+  }
 }
 
-@media screen and (max-width: 720px) and (min-width: 992px) {
+@media (min-width: 768px) {
+  .nav__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 992px) {
   img {
     width: 100%;
     max-width: 60%;
